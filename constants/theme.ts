@@ -1,53 +1,49 @@
-/**
- * Below are the colors that are used in the app. The colors are defined in the light and dark mode.
- * There are many other ways to style your app. For example, [Nativewind](https://www.nativewind.dev/), [Tamagui](https://tamagui.dev/), [unistyles](https://reactnativeunistyles.vercel.app), etc.
- */
-
-import { Platform } from 'react-native';
-
-const tintColorLight = '#0a7ea4';
-const tintColorDark = '#fff';
-
 export const Colors = {
-  light: {
-    text: '#11181C',
-    background: '#fff',
-    tint: tintColorLight,
-    icon: '#687076',
-    tabIconDefault: '#687076',
-    tabIconSelected: tintColorLight,
-  },
-  dark: {
-    text: '#ECEDEE',
-    background: '#151718',
-    tint: tintColorDark,
-    icon: '#9BA1A6',
-    tabIconDefault: '#9BA1A6',
-    tabIconSelected: tintColorDark,
-  },
+  primary: '#3B37DB', // Exact vibrant TaskFlow Blue-Indigo from Login image
+  primaryHover: '#2E2AB5',
+  primaryLight: '#EEF2FF',
+  
+  background: '#F8F9FA',
+  cardBackground: '#FFFFFF',
+  
+  textPrimary: '#111827',
+  textSecondary: '#6B7280',
+  textMuted: '#9CA3AF',
+  
+  border: '#E5E7EB',
+  borderFocused: '#3B37DB',
+  borderError: '#EF4444',
+  
+  error: '#EF4444',
+  success: '#10B981',
+  
+  white: '#FFFFFF',
+  black: '#000000',
+  
+  tagTodayBg: '#FEE2E2',
+  tagTodayText: '#991B1B',
+  tagTomorrowBg: '#FFEDD5',
+  tagTomorrowText: '#9A3412',
 };
 
-export const Fonts = Platform.select({
-  ios: {
-    /** iOS `UIFontDescriptorSystemDesignDefault` */
-    sans: 'system-ui',
-    /** iOS `UIFontDescriptorSystemDesignSerif` */
-    serif: 'ui-serif',
-    /** iOS `UIFontDescriptorSystemDesignRounded` */
-    rounded: 'ui-rounded',
-    /** iOS `UIFontDescriptorSystemDesignMonospaced` */
-    mono: 'ui-monospace',
+export const Typography = {
+  title: {
+    fontSize: 26,
+    fontWeight: '700' as const,
+    color: Colors.textPrimary,
   },
-  default: {
-    sans: 'normal',
-    serif: 'serif',
-    rounded: 'normal',
-    mono: 'monospace',
+  subtitle: {
+    fontSize: 14,
+    color: Colors.textSecondary,
   },
-  web: {
-    sans: "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
-    serif: "Georgia, 'Times New Roman', serif",
-    rounded: "'SF Pro Rounded', 'Hiragino Maru Gothic ProN', Meiryo, 'MS PGothic', sans-serif",
-    mono: "SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
+  label: {
+    fontSize: 14,
+    fontWeight: '600' as const,
+    color: Colors.textPrimary,
   },
-});
+  buttonText: {
+    fontSize: 16,
+    fontWeight: '600' as const,
+    color: Colors.white,
+  },
+};
